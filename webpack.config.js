@@ -1,9 +1,20 @@
 const path = require("path");
+const fs = require("fs-extra");
+
+// each script has an entry
+const scriptPath = path.resolve(__dirname, "./src");
+const entry = fs
+  .readdirSync(scriptPath)
+  .filter(
+    (dir) => !fs.statSync(`${scriptPath}/${dir}`).isFile() && dir !== "template"
+  )
+  .reduce((entry, scriptName) => {
+    entry[scriptName] = `${scriptPath}/${scriptName}/main.tsx`;
+    return entry;
+  }, {});
+
 module.exports = {
-  entry: {
-    "00_test": "./src/00_test/main.tsx",
-    "01_float_ball": "./src/01_float_ball/main.tsx",
-  },
+  entry: entry,
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "[name].js",
