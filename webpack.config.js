@@ -19,6 +19,13 @@ module.exports = {
     // not listening
     ignored: /node_modules/,
   },
+  externals: {
+    react: "React",
+    "react-dom": "ReactDOM",
+  },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"],
+  },
   module: {
     rules: [
       {
@@ -26,7 +33,7 @@ module.exports = {
         use: ["style-loader", "css-loader", "less-loader"],
       },
       {
-        test: /\.tsx?$/,
+        test: /\.(tsx?|jsx?)$/,
         use: ["babel-loader"],
         exclude: /node_modules/,
       },

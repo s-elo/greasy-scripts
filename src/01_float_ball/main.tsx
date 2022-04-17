@@ -1,9 +1,11 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import { render } from "react-dom";
+// import { createRoot } from "react-dom/client";
 import "./main.less";
 
-window.addEventListener("load", () => {
+window.addEventListener("load", async () => {
   "use strict";
+
   const div = document.createElement("div");
   div.setAttribute("id", "float-ball");
   div.innerText = "ball";
@@ -82,5 +84,7 @@ window.addEventListener("load", () => {
 
   const App = () => <div>this is a div</div>;
 
-  createRoot(document.getElementById("float-ball")).render(<App />);
+  render(<App />, document.getElementById("float-ball"));
+  // createRoot(document.getElementById("float-ball")).render(<App />);
+  console.log('call')
 });
