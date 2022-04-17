@@ -1,9 +1,12 @@
 const path = require("path");
 module.exports = {
-  entry: "./src/main.tsx",
+  entry: {
+    "00_test": "./src/00_test/main.tsx",
+    "01_float_ball": "./src/01_float_ball/main.tsx",
+  },
   output: {
     path: path.resolve(__dirname, "./dist"),
-    filename: "bundle.js",
+    filename: "[name].js",
     environment: {
       arrowFunction: false,
     },

@@ -1,8 +1,8 @@
 import React from "react";
-import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
 import "./main.less";
 
-window.onload = (() => {
+window.addEventListener("load", () => {
   "use strict";
   const div = document.createElement("div");
   div.setAttribute("id", "float-ball");
@@ -82,7 +82,5 @@ window.onload = (() => {
 
   const App = () => <div>this is a div</div>;
 
-  render(<App />, document.getElementById("float-ball"));
-
-  render(<App />, document.getElementById("float-ball"));
-}) as typeof window.onload;
+  createRoot(document.getElementById("float-ball")).render(<App />);
+});
