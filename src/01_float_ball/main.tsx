@@ -82,9 +82,8 @@ window.addEventListener("load", async () => {
 
   dragger(div);
 
-  const App = () => <div>this is a div</div>;
+  const App = () => <div>Floating</div>;
 
   render(<App />, document.getElementById("float-ball"));
   // createRoot(document.getElementById("float-ball")).render(<App />);
-  console.log('call')
 });
