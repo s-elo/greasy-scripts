@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="dns-prefetch" href="https://api.oneneko.com" />
+    <link rel="dns-prefetch" href="https://www.talklee.com/api/bing" />
+    <title>I am just a tab</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div id="timer">
+        <div id="time"></div>
+        <div id="date"></div>
+      </div>
+      <div id="input-wrapper">
+        <div id="engine-selector">
+          <img
+            id="current-engine"
+            src="./imgs/Baidu.svg"
+            alt="baidu"
+            search-format="https://www.baidu.com"
+          />
+          <section id="engine-selections" class="engine-selections">
+            <li class="img-li">
+              <img
+                src="./imgs/Baidu.svg"
+                alt="Baidu"
+                search-format="https://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%s"
+              />
+            </li>
+            <li class="img-li">
+              <img
+                src="./imgs/Google.png"
+                alt="Google"
+                search-format="https://www.google.com/search?q=%s"
+              />
+            </li>
+            <li class="img-li">
+              <img
+                src="./imgs/Bing.ico"
+                alt="Bing"
+                search-format="https://www.bing.com/search?q=%s"
+              />
+            </li>
+          </section>
+        </div>
+        <input type="text" id="search-input" />
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
