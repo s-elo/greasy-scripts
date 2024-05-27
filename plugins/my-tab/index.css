@@ -9,9 +9,7 @@ img {
   /* padding: 0.3rem; */
 }
 #root {
-  /* https://www.talklee.com/api/bing/ */
-  /* https://api.oneneko.com/v1/bing_today */
-  background-image: url(https://api.oneneko.com/v1/bing_today);
+  background-image: url(https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN);
   background-repeat: no-repeat;
   background-size: cover;
   /* background-color: #fff; */
